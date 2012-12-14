@@ -1,0 +1,36 @@
+<% provide(:title, 'Cauchy Theorems and a Very Important Example') %>
+
+<a name = "cauchy"><b> Cauchy Theorems </b></a>
+<hr>
+<p>
+	<ul>
+		<li>
+			Let $f(z)$ be holomorphic in a simply-connected region $R\subset \C(z)$.
+			Let $C$ be a simple (doesn't cross itself), closed curves in $R$.
+			Then,
+			\[
+				\oint_C f(z) dz = 0.
+			\]
+		</li>
+	</ul>
+</p>
+
+<a name = "vie"><b> a Very Important Example </b></a>
+<hr>
+<p>
+	
+
+	<ul>
+		<li> 
+			<%= image_tag("vie.png", :alt => "VIE", :height => '200', :align => 'middle') %>
+			\[
+				\int_C (z - a)^n = 
+				\begin{cases}
+					0,\quad \text{ if $n\neq -1$}\\
+					2\pi i \quad \text{ if $n = -1$}.
+				\end{cases}
+			\]
+		</li>
+		
+	</ul>
+</p>

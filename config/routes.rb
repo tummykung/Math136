@@ -12,6 +12,19 @@ Math136::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/complex_arithmetic',   to: 'static_pages#complex_arithmetic'
   match '/multiple_valued_and_calculus',   to: 'static_pages#multiple_valued_and_calculus'
+  match '/holomorphic',   to: 'static_pages#holomorphic'
+  match '/cauchy',   to: 'static_pages#cauchy'
+  match '/power_and_singularities',   to: 'static_pages#power_and_singularities'
+  match '/residue_calculus',   to: 'static_pages#residue_calculus'
+  match '/integral_transforms',   to: 'static_pages#integral_transforms'
+  match '/laplace',   to: 'static_pages#laplace'
+  match '/principal_value',   to: 'static_pages#principal_value'
+  match '/branch',   to: 'static_pages#branch'
+  match '/integral_multi',   to: 'static_pages#integral_multi'
+  match '/elliptic',   to: 'static_pages#elliptic'
+  match '/riemann',   to: 'static_pages#riemann'
+  match '/summation',   to: 'static_pages#summation'
+  match '/log',   to: 'static_pages#log'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
