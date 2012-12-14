@@ -7,4 +7,10 @@ class StaticPagesController < ApplicationController
 
   def help
   end
+
+  def complex_arithmetic
+  end
+
+  def multiple_valued_and_calculus
+  end
 end

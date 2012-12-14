@@ -10,6 +10,8 @@ Math136::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/content',   to: 'static_pages#content'
   match '/about',   to: 'static_pages#about'
+  match '/complex_arithmetic',   to: 'static_pages#complex_arithmetic'
+  match '/multiple_valued_and_calculus',   to: 'static_pages#multiple_valued_and_calculus'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

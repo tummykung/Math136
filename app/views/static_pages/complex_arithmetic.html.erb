@@ -1,0 +1,52 @@
+<% provide(:title, 'Complex Arithmetic') %>
+
+<a name = "ComplexArithmetic"><b> Complex Arithmetic </b></a>
+<hr>
+<p>
+	Cartesian:
+	\[
+		C = \{a + bi: a, b\in R\}.
+	\]
+
+	Polar form:
+	\[
+		z = re^{i\theta},
+	\]
+	where $\theta$ is the argument and $\theta$ is the magnitude.
+
+	The conversion is
+	\begin{align*}
+		r &= \sqrt{a^2 + b^2},\\
+		\theta &= \text{atan2}(a,b) = \arctan\left(\frac{b}{a}\right),
+	\end{align*}
+	where when we use $\arctan\left(\frac{b}{a}\right)$ we lost 
+	some information about the sign of $b/a$, so we might need to plus
+	or minus $\pi$.
+</p>
+
+<a name = "ComplexFuncions"><b> Complex Functions </b></a>
+<hr>
+<p>
+	Examples: $e^{i\theta}z, e^z,  \frac{1}{z}.$
+	<ul>
+		<li>
+			Exponential function:
+			\[
+				e^z = e^{x + iy} = e^x(\cos y + i\sin y).
+			\]
+		</li>
+		<li>
+			Logarithmic function:
+			\[
+				\log(z) = \ln |z| + i\arg(z). 
+			\]
+		</li>
+		<li>
+			Principal-value logarithmic function:
+			\[
+				\text{Log}(z) = \ln |z| + i\text{Arg}(z), 
+			\]
+			where $\text{Arg}(z)$ is in the range $(-\pi,\pi].$
+		</li>
+	</ul>
+</p>

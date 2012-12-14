@@ -1,0 +1,48 @@
+<% provide(:title, 'Multiple-valued functions, continuity and differentiability') %>
+
+<a name = "Multiple-valued-functions"><b> Multiple-valued functions </b></a>
+<hr>
+<p>
+	<ul>
+		<li>
+			Examples: $\log z, \sqrt{z}.$
+		</li>
+		
+	</ul>
+</p>
+
+<a name = "continuity"><b> Continuity </b></a>
+<hr>
+<p>
+	Note that the definition is the same as in the real case.
+	The difference is that the limit is much stronger, because
+	it comes from all possible paths.
+	<ul>
+		<li>
+			Def: $\lim_{z\to z_0}f(z) = w_0$ if for any $\epsilon > 0$,
+			there exists $\delta > 0$ such that $0 < |z - z_0| < \delta$
+			($z$ in a punctured, open disc) implies 
+			$|f(z) - w_0| < \epsilon.$
+		</li>
+		
+	</ul>
+</p>
+
+<a name = "differentiability"><b> Differentiability </b></a>
+<hr>
+<p>
+	
+	<ul>
+		<li>
+			Again, same definition.
+			\[
+				f'(z_0) = \lim_{\Delta z \to 0} \frac{f(z_0 + \Delta z) - f(z_0)}{\Delta z}.
+			\]
+		</li>
+
+		<li>
+			Def: The function $f(z)$ is said to be <em>differentiable</em>
+			at $z = z_0$ if the limit above exists.
+		</li>
+	</ul>
+</p>
