@@ -15,6 +15,8 @@
 			\]
 			where $N$ is the number of zeros of $h(z)$ (including multiplicities)
 			inside $\gamma$ and $M$ is the number of poles (again, including multiplicities).
+			Note that $v$ is the winding number with respect to the point 
+			specified by the second parameter.
 		</li>
 
 		<li> One of its uses is to prove Rouche's Theorem.
@@ -61,10 +63,12 @@
 			\left\{
 			\frac{1}{z-a_n} -
 			\frac{1}{a_n}
-			\right\}
+			\right\}.
 		\]
 		</li>
-
+		<li>
+			Be really careful about the convergence issue.
+		</li>
 		<li> One of its uses is to prove Weierstrass Factor Theorem.
 		</li>
 	</ul>
@@ -108,7 +112,70 @@
 		\begin{align*}
 		\mathcal{M} \{  f (t) \} &= \tilde{f}(z) = \int_0^{\infty}  f(t) t^z \frac{dt}{t} =  \int_0^{\infty} f(t) t^{z-1}  dt \\
 		\mathcal{M}^{-1} \{ \tilde{f}(z) \} &= f(t) = \frac{1}{2 \pi i} \int_{c-i\infty}^{c+i \infty} \tilde{f}(z) t^{-z} dz
-		\end{align*}}}
+		\end{align*}
 		</li>
+	</ul>
+</p>
+
+<a name = "gamma"><b> Gamma Functions </b></a>
+<p>
+	<ul>
+		<li>
+			This common definition for the gamma function
+			\[
+			\Gamma(z)=\int_0^{\infty}e^{-t}t^{z-1}dt
+			\]
+			only converges $\Re z>0$.
+		</li>
+		<li> We can use analytic continuation to get
+			\[
+			\Gamma(z)=\frac{1}{2i\sin(\pi z)}\int_Ce^ss^{z-1}ds,
+			\]
+			which converges for all points in the plane
+			except for non-positive integers.
+
+		</li>
+	</ul>
+</p>
+
+<a name = "gamma"><b> Conformal Maps </b></a>
+<p>
+	<ul>
+		<li>
+			<b>The Schwarz-Christoffel Transformation.</b>
+			Suppose we want to find a map from the 
+			interior of a polygon in the $w$-plane with
+			vertices $w_1, w_2, \ldots, w_n$ listed in
+			counterclockwise order and
+			interior angles $a_1\pi, a_2\pi, \ldots, a_n\pi$
+			to the upper half $z$-plane so that $f(\infty) = w_n.$
+			This transformation is given by
+			\[
+				w = A\int\prod_{k=1}^n (z-x_k)^{a_k - 1} + B,
+			\]
+			where $A$ and $B$ are constants and $f(x_k) = w_k.$
+		</li>
+		<li>
+			An important note is that this transformation is 
+			not unique.
+		</li>
+	</ul>
+</p>
+
+
+<a name = "analytic"><b> Analytic Continuation </b></a>
+<p>
+	<ul>
+		<li>
+			<b> The Identity Theorem. </b>
+			Let $f_1(z)$ and $f_2(z)$ be holomorphic in some connected,
+			open set $D$. If $f_1(z) = f_2(z)$ on a set $S$ of points
+			with an accumulation point $c\in D$, then 
+			\[
+				f_1(z) = f_2(z)
+			\]  
+			throughout $D$.
+		</li>
+
 	</ul>
 </p>
