@@ -1,0 +1,114 @@
+<% provide(:title, 'Other Special Topics') %>
+
+<p align = "right"> 
+ 	<%= link_to "Previous: Log trick",    log_path %>
+</p>
+
+<a name = "argument"><b> The Argument Principle </b></a>
+<p>
+	<ul>
+		<li> Suppose $\gamma$ is a piecewise smooth curve that does not pass through 
+			any zeros or poles of $f(z).$ Suppose also that $f(z)$
+			does not have any essential singularities.
+			\[
+			\frac{1}{2\pi i}\oint \frac{f'(z)}{f(z)}dz = N - M = v(f(\gamma), 0),
+			\]
+			where $N$ is the number of zeros of $h(z)$ (including multiplicities)
+			inside $\gamma$ and $M$ is the number of poles (again, including multiplicities).
+		</li>
+
+		<li> One of its uses is to prove Rouche's Theorem.
+		</li>
+		<li>
+			<b>Rouche's Theorem</b>:
+			If $f$ and $g$ are analytic complex functions on an open set 
+			which contains a piecewise smooth simple closed curve $\gamma$,
+			and $|g(z)| < |f(z)|$ for all $z\in \gamma$, then
+			$f+g$ has the same number of zeros inside $\gamma$ as $f$ 
+		</li>
+		<li>
+			This theorem is reall powerful. It can be used to prove the
+			fundamental theorem of algebra (that there are exactly $n$ roots
+			of polynomial of degree $n$ on the complex number field).
+		</li>
+	</ul>
+</p>
+
+<a name = "mittag"><b> The Mittag-Leffler Expansion </b></a>
+<p>
+	<ul>
+		<li> The conditions are the following:
+		<ul>
+			<li> Suppose that the only singularities
+				of $f(z)$ in the finite $z$ plane are the simple
+				poles at $a_1, a_2, a_3, \ldots, $
+				arranged in order of increasing moduli.
+			</li>
+			<li>
+				Let the residues of $f(z)$ at
+				$a_1, a_2, a_3, \ldots, $ be 
+				$b_1, b_2, b_3, \ldots.$
+			</li> 
+			<li> Let $C_N$ be circles of radius $R_N$ which
+				do not pass through any poles and on which
+				$|f(z)| < M$, where $M$ is independent of $N$
+				and $R_N\to \infty$ as $N\to \infty.$ 
+			</li>
+		</ul>
+		Then,
+		\[
+			f(z) = f(0) + \sum_{n=1}^\infty b_n
+			\left\{
+			\frac{1}{z-a_n} -
+			\frac{1}{a_n}
+			\right\}
+		\]
+		</li>
+
+		<li> One of its uses is to prove Weierstrass Factor Theorem.
+		</li>
+	</ul>
+</p>
+
+<a name = "weierstrass"><b> The Weierstrass Factor Theorem </b></a>
+<p>
+	<ul>
+		<li> Let $(z_m)$, $m\in \mathbb{N}$ be an arbitrary sequence of complex numbers different from $0$,arranged by increasing moduli, and $\lim_{m\to \infty} = \infty$.
+		Then there exists $\nu\in \N$ such that $\sum_{j=1}^\infty |z_j|^{-\nu + 1}$
+		converges uniformly and for 
+		\[Q_{\nu}(z) = z + \frac{z^2}{2} + \cdots +\frac{z^\nu}{\nu},\nu\geq 1,Q_0(z) = 0,\]
+		and for arbitrary entire function $g(z),$
+		\[
+			G(z) := e^{g(z)}z^m \prod_{j=1}^\infty 
+			\left(1 - \frac{z}{a_j}\right) \exp\left({Q_\nu\left(\frac{z}{a_j}\right)}\right)
+		\]
+		is an entire function with a zero 
+		of multiplicity $m$ at $z = 0$ and
+		with the other zeros exactly at $a_j.$
+		</li>
+
+		<li> One of its cool results:
+			\[
+				\frac{2}{1}\cdot
+				\frac{2}{3}\cdot
+				\frac{4}{3}\cdot
+				\frac{4}{5}\cdot
+				\frac{6}{5}\cdot
+				\frac{6}{7}\cdots
+				= \frac{\pi}{2}
+			.\]
+		</li>
+	</ul>
+</p>
+
+<a name = "mellin"><b> The Mellin Transform </b></a>
+<p>
+	<ul>
+		<li>
+		\begin{align*}
+		\mathcal{M} \{  f (t) \} &= \tilde{f}(z) = \int_0^{\infty}  f(t) t^z \frac{dt}{t} =  \int_0^{\infty} f(t) t^{z-1}  dt \\
+		\mathcal{M}^{-1} \{ \tilde{f}(z) \} &= f(t) = \frac{1}{2 \pi i} \int_{c-i\infty}^{c+i \infty} \tilde{f}(z) t^{-z} dz
+		\end{align*}}}
+		</li>
+	</ul>
+</p>

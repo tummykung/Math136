@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
 
   def holomorphic
   end
-  
+
   def cauchy
   end
 
@@ -52,5 +52,7 @@ class StaticPagesController < ApplicationController
 
   def log
   end
-  
+
+  def special
+  end
 end

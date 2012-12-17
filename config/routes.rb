@@ -25,6 +25,7 @@ Math136::Application.routes.draw do
   match '/riemann',   to: 'static_pages#riemann'
   match '/summation',   to: 'static_pages#summation'
   match '/log',   to: 'static_pages#log'
+  match '/special',   to: 'static_pages#special'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
