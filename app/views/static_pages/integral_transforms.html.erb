@@ -1,0 +1,83 @@
+<% provide(:title, 'Integral Transforms') %>
+
+<p align = "right"> 
+ 	<%= link_to "Previous: Residue Calculus",    residue_calculus_path %> ||
+ 	<%= link_to "Next: Laplace equation",    laplace_path %> 
+</p>
+
+<a name = "integral-transforms"><b> Integral Transforms </b></a>
+<p>
+	<ul>
+		Here are the definitions:
+		<table border="1">
+			<tr>
+				<td>(Forward) Fourier
+					\[
+						F(k) = \mathcal{F}\{f(x)\} = \int_{-\infty}^\infty f(x)e^{-ikx}dx.
+					\]
+				</td>
+				<td> Inverse Fourier
+					\[
+						f(x) = \mathcal{F}^{-1}\{F(k)\} = \frac{1}{2\pi} \int_{-\infty}^\infty
+						F(k)e^{ikx}dk.
+					\]
+				</td>
+			</tr>
+			<tr>
+				<td>(Forward) Laplace
+					\[
+						F(s) = \mathcal{L}\{f(t)\} = \int_{0}^\infty f(x)e^{-sx}dt.
+					\]
+				</td>
+				<td> Inverse Laplace
+					\[
+						f(x) = \mathcal{L}^{-1}\{F(s)\} = \frac{1}{2\pi i}
+						\int_{a-i\infty}^{a + i\infty} F(k)e^{st}ds.
+					\]
+				</td>
+			</tr>
+		</table>
+		<li> 
+			In general,
+			\[
+				F(\zeta) = \int_a^b f(x)K(\zeta, x)dx,
+			\]
+			where $K(\zeta, x)$ is called a kernel.
+		</li>
+		<li>
+			Note that the Fourier integral transforms are linear operations:
+			\[
+			\mathcal{F}\{af(x)+bg(x)\} = a\mathcal{F}\{f(x)\} + b\mathcal{F}\{g(x)\}.
+			\]
+		</li>
+		<li>
+			The forward and inverse transforms are inverse operations:
+			\[
+				\mathcal{F}^{-1}\{\mathcal{F}\{f(x)\}\}
+				=
+				\frac{f(x^+) + f(x^-)}{2}.
+			\]
+			Thus, we can apply to functions $f(x)$ that are
+			piecewise continuous, absolutely integrable, 
+			and have property that
+			\[
+				F(k) = \mathcal{F}\{f(x)\} \leq \frac{M}{|k|}
+			\]
+			for some $M$ and sufficiently large $k$.
+		</li>
+	</ul>
+</p>
+
+<a name = "solveing-des"><b> Solving DEs using Integral Transforms </b></a>
+<p>
+	<ul>
+		<li>
+			Big idea: Integral transforms turn differential operators
+			into algebraic operators, so we can easily
+			solve algebraic equations. Then we perform
+			an inverse integral transform to get the solution
+			in the original space. The hard work is usually
+			when we do the inverse integral transform.
+		</li>
+	</ul>
+</p>

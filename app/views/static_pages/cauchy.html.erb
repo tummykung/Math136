@@ -1,11 +1,15 @@
 <% provide(:title, 'Cauchy Theorems and a Very Important Example') %>
 
+ <p align = "right"> 
+ 	<%= link_to "Previous:   Holomorphic functions, Cauchy-Riemann eqs, complex integration",    holomorphic_path %> ||
+ 	<%= link_to "Next: Power series and Singularities",    power_and_singularities_path %> 
+ </p>
+ 
 <a name = "cauchy"><b> Cauchy Theorems </b></a>
-<hr>
 <p>
 	<ul>
 		<li>
-			Let $f(z)$ be holomorphic in a simply-connected region $R\subset \C(z)$.
+			Let $f(z)$ be holomorphic in a simply-connected region $R\subset \mathbb{C}(z)$.
 			Let $C$ be a simple (doesn't cross itself), closed curves in $R$.
 			Then,
 			\[
@@ -15,15 +19,14 @@
 	</ul>
 </p>
 
-<a name = "vie"><b> A Very Important Example </b></a>
 <hr>
+<a name = "vie"><b> A Very Important Example </b></a>
 <p>
-	
-
 	<ul>
-		<li> 
+
+		<li> This example will be a lemma for important proofs.</li>
 			<%= image_tag("vie.png", :alt => "VIE", :height => '200', :align => 'middle') %>
-			\[
+		<li> Then we get	\[
 				\int_C (z - a)^n = 
 				\begin{cases}
 					0,\quad \text{ if $n\neq -1$}\\

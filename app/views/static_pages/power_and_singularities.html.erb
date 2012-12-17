@@ -1,0 +1,129 @@
+<% provide(:title, 'Power series and Singularities') %>
+<p align = "right"> 
+ 	<%= link_to "Previous: Cauchy's theorem and a very important example (VIE)",    cauchy_path %> ||
+ 	<%= link_to "Next: Residue Calculus",    residue_calculus_path %> 
+</p>
+
+<p>
+	<ul>
+		<li>
+			"ML Bound" (an important tool).
+			\[
+				\left|\int_C f(z) dz\right| \leq \max_{z\in C}|f(z)| \cdot \text{length of $C$}
+			\]
+		</li>
+	</ul>
+</p>
+
+<hr>
+<a name = "power-series"><b> Power Series </b></a>
+<p>
+	<ul>
+		<li>
+			The power series is of the form
+			\[
+				\sum_{n=0}^\infty a_n (z - z_0)^n,
+			\]
+			and the radius of convergence is always a disc (by the ratio test)
+			<ul>
+				<li>
+					The series converges if and only if 
+					$\lim_{n\to \infty} \left|\frac{a_{n+1}}{a_n}\right| |z-z_0| < 1.$
+				</li>
+			</ul>
+		</li>
+
+		<li>
+			Note also that for a power series, a convergence implies 
+			a uniform convergence (so we can swap sum and integral, or
+			sum and derivative).
+		</li>
+
+		<li>
+			Def: A function $f(z)$ is <em>holomorphic</em> at $z = z_0$
+			if it is differentiable at $z = z_0$ and 
+			in a small neighborhood of that point.
+		</li>
+		<li>
+			Def: A function $f(z)$ is <em>analytic</em> at $z = z_0$
+			if it can be represented by a power series
+			$f(z) = \sum_{n=0}^\infty a_n(z - z_0)^n$
+			and that series converge for some open disc centered at
+			$z = z_0.$
+		</li>
+		<li>
+			<b>BIG IDEA:</b> Analytic $\Leftrightarrow$ Holomorphic.
+			<ul>
+				<li> Proof idea: Take the derivative of the power series, and use the 
+					uniform convergence to swap the sum and 
+					the derivative.
+				</li>
+				<li>
+					Note that 
+					\[
+						a_n = \frac{1}{2\pi i}\oint \frac{f(\zeta)}{(\zeta - z_0)^{n+1}}d\zeta
+						= \frac{f^{(n)}(z_0)}{n!},
+					\]
+					which agrees with the Taylor series expansion.
+				</li>
+			</ul>
+		</li>
+		<li> <b>Liouville's Theorem:</b> Every bounded entire function is constant.
+			<ul>
+				<li> Proof idea: Use the ML bound for the power series expansion
+					of the function.
+				</li>
+			</ul>
+		</li>
+	</ul>
+</p>
+
+<hr>
+<a name = "singularities"><b> Singularities </b></a>
+<p>
+	<ul>
+		<li>
+			Def: A function has an <em>isolated singularity</em>
+			at a point, if it it holomorphic in some
+			punctured disc around that point.
+		</li>
+		<li>
+			If $f(z)$ has an isolated singularity at $z = z_0,$
+			then
+			\[
+				f(z) = \sum_{n=-\infty}^\infty a_n(z - z_0)^n
+			\]
+			and this series converges in some punctured disc
+			about $z = z_0,$
+			and $a_n = \frac{1}{2\pi i}\oint_C \frac{f(z)}{(z-z_0)^{n+1}}dz$
+			where $C$ is a simple, closed, positively-oriented curve
+			in the disc surrounding $z = z_0.$
+		</li>
+		<li> There are exactly three types of singularities:
+			<table border="1">
+				<tr>
+					<td>Removable singularity</td>
+					<td> $\lim_{z\to z_0} f(z)$ exists </td>
+					<td> Laurent series expansion for $f$ about $z = z_0$
+						has no terms with negative exponents (Taylor series)</td>
+					<td> Example: $f(z) = \frac{\sin z}{z}$ around $z = 0$.</td>
+				</tr>
+				<tr>
+					<td>Pole</td>
+					<td> $\lim_{z\to z_0} f(z)$ does NOT exists, but
+					 	 $\lim_{z\to z_0} |f(z)| = +\infty$ </td>
+					<td> Laurent series expansion for $f$ about $z = z_0$
+						 has a finite number of terms with negative exponents</td>
+					<td> Example: $f(z) = \frac{1}{z}$ around $z = 0$.</td>
+				</tr>
+				<tr>
+					<td>Essential Singularity</td>
+					<td> neither limit exists </td>
+					<td> Laurent series expansion for $f$ about $z = z_0$
+						 has an infinite number of terms with negative exponents</td>
+					<td> Example: $f(z) = e^{1/z}$ around $z = 0$.</td>
+				</tr>
+				</table>
+		</li>
+	</ul>
+</p>

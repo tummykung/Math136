@@ -1,0 +1,58 @@
+<% provide(:title, 'Laplace equation') %>
+
+<p align = "right"> 
+ 	<%= link_to "Previous: Integral Transforms",    integral_transforms_path %> ||
+ 	<%= link_to "Next: Principal value integrals",    principal_value_path %> 
+</p>
+
+<a name = "laplace"><b> Laplace equation </b></a>
+<p>
+	<ul>
+		<li>
+			Dirichlet Laplace problem in the upper half plane:
+			\begin{align*}
+				\nabla^2 u(x,y) &= u_{xx} + u_{yy} = 0,\quad -\infty < x< \infty, y > 0\\
+				u(x, 0) &= f(x).
+			\end{align*}
+		</li>
+		<li> Below is a possile solution approach.
+			<ol>
+				<li>
+					Transform the boundary conditions:
+					\[
+						u(x,0) = f(x) \Rightarrow U(k,0) = \mathcal{F}\{f(x)\} = F(k).
+					\]
+				</li>
+				<li>
+					Solve the resulting ODE:
+					\[
+						-k^2 U + U_{yy} = 0.
+					\]
+					We get
+					$U(k, y) = A(k)e^{-|k|y} + B(k)e^{|k|y}.$
+					Now, by the boundary conditions, we get
+					$B(k) = 0$ and $A(k) = F(k).$ Hence
+					\[
+						U(k,y) = F(k)e^{-|k|y}.
+					\]
+				</li>
+				<li>
+					We invert to get
+					\begin{align*}
+					u(x,y) 
+					&= \mathcal{F}^{-1}\{U\}\\
+					&= \mathcal{F}^{-1}\{F(k)e^{-|k|y}\}\\
+					&= \mathcal{F}^{-1}\{F(k)\} * \mathcal{F}^{-1}\{e^{-|k|y}\}\\
+					&= f(x) * \frac{y}{\pi (x^2 + y^2)}.
+					\end{align*}
+					Therefore, the solution is
+					\[
+						u(x,y) = 
+						\frac{1}{\pi}\int_{-\infty}^\infty 
+						\frac{f(\zeta)y}{(x -  \zeta)^2 + y^2} d\zeta.	
+					\]
+				</li>
+			</ol>
+		</li>
+	</ul>
+</p>

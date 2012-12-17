@@ -1,0 +1,134 @@
+<% provide(:title, 'Elliptic functions') %>
+
+<p align = "right"> 
+ 	<%= link_to "Previous: Integrals involving multi-valued functions",    integral_multi_path %> ||
+ 	<%= link_to "Next: Riemann sphere and infinity",    riemann_path %> 
+</p>
+
+<a name = "periodic"><b> Periodic functions </b></a>
+<p>
+	<ul>
+		<li>
+			<b>Def:</b>
+			An analytic function $f(z)$
+			is <em>periodic</em> if there exists a
+			\underline{non-zero} number $\Omega$
+			such that for <u>every</u> $z$
+			of the domain of regularity of $z$ (points that do not blow up),
+			$z + \Omega$ also belongs to this domain, and
+			\[f(z + \Omega) = f(z).\]
+			Every such number $\Omega$ is called a period of $f(z).$
+		</li>
+		<li>
+			<b> Def: </b>
+			A <em>simply periodic</em> function is a function
+			that is periodic and has no periods besides
+			the period $n\omega.$
+
+		</li>
+		<li>
+			Suppose $f(z)$ is a simply periodic
+			function with the primitive period of 1.
+			Note that $e^z$ has the primitive period 
+			$\omega = 2\pi i.$
+			Then we can change variables
+			\[z = \frac{1}{2\pi i}\log\zeta,\quad
+			\zeta = e^{2\pi i z}.\]
+			Thus, we can define
+			\[f(z) = f\left(\frac{1}{2\pi i}\log\zeta\right)
+			= \phi(\zeta).\]
+			In other words, $f(z) = \phi(e^{2\pi i z}),$
+			so $f$ can be regarded as a function of $e^{2\pi i z}.$
+			Note that the multiple values created from
+			the logarithm functions cancel out 
+			with the periodic functions to give 
+			a unique value.\\
+			For example,
+			\[
+				\sin(2\pi z) = \frac{1}{2i}(e^{2\pi iz} - e^{-2\pi iz})
+			=
+				\frac{1}{2i}\left(\zeta - \frac{1}{\zeta}\right).
+			\]
+			Another example is that
+			\[
+				\tan (\pi z) = -i\frac{\zeta - 1}{\zeta + 1}.
+			\]
+			Notice that if we find a Laurent series of 
+			$\phi(\zeta)$, it should correspond
+			to the Fourier expansion of $f(z)$.
+		</li>
+
+		<li> <b>Theorem:</b> The periodicity of a single-valued analytic
+			function can be only simple or double;
+			there is no third.
+		</li>
+	</ul>
+</p>
+
+
+<a name = "elliptic"><b> Elliptic functions and Elliptic Integrals </b></a>
+<p>
+	<ul>
+		<li>
+			<b>Def:</b>
+			A doubly periodic function which 
+			has no singularities other than poles
+			in the period-parallelogram, is called
+			an  <em>elliptic function</em>
+			belonging to this period-parallelogram.
+		</li>
+		<li> <b>First Liouville Theorem.</b>
+		An entire doubly periodic function is constant.
+		</li>
+		<li> <b>Second Liouville Theorem.</b>
+			The sum of residues at the poles of an elliptic
+			function in the period parallelogram is equal to zero.
+		</li>
+	</ul>
+</p>
+
+
+<a name = "theta"><b> Theta functions </b></a>
+<p>
+	<ul>
+		<li>
+			The Jacobi theta functions play a crucial role in number theory.
+		</li>
+		<li>
+			The \textbf{theta function} is defined by the series
+			\[\Theta(z|\tau) = \sum_{n=-\infty}^\infty
+			e^{\pi in^2\tau}e^{2\pi i n z},\]
+			where $z\in \mathbb{C}$ and $\tau\in \mathbb{H}$ (the 
+			upper-half plane).
+		</li>
+
+		<li> <b>The Theorems about Sums of Squares: </b>
+			Suppose $r_2(n)$ is the number of ways $n$
+			can be written as the sum of two squares. 
+			The problem statement is as follows:
+			<q>
+				Which integers can be written as a sum of two squares?
+				More precisely, can one determine an expression
+				for $r_2(n)$?
+			</q>
+			<ul>
+				<li>
+					It turns out that we can, but this problem
+					from the ancient Greek
+					was not solved until after 1500 years later,
+					and the first solution involves the use of 
+					theta functions!
+				</li>
+				<li>
+					The answer is 
+					\[
+						r_2(n) = 4(d_1(n) - d_3(n)),
+					\] where $d_1(n)$ denote the number of divisors of $n$
+					of the form $4k + 1,$
+					and $d_3(n)$ denote the number of divisors
+					of $n$ of the form $4k+3.$
+				</li>
+			</ul>
+		</li>
+	</ul>
+</p>
