@@ -8,7 +8,7 @@
 <a name = "cauchy"><b> Residue Calculus </b></a>
 <p>
 	<ul>
-		<li> Def: Suppose the function $f(z)$ has an isolateed singularity at 
+		<li> Def: Suppose the function $f(z)$ has an isolated singularity at 
 			$z = z_0.$ <em>The residue</em> of $f(z)$ at $z = z_0,$
 			which we will denote as $\text{Res}(f;z_0),$ is equal to the
 			coefficient of the $(z - z_0)^{-1}$ term in 
@@ -63,5 +63,13 @@
 				Proof idea: Use our VIE.
 			</li>
 		</ul>
+		<li>
+			Lemma: Let $f(z)$ have a simple pole at $z = z_0.$ Then,
+			\[
+				\lim_{\epsilon\to 0}\int_C f(z)dz = (\theta_2 - \theta_1) i \text{Res}(f;z_0),
+			\]
+			where $C$ is a section of circle around $z_0$ radius $\epsilon$
+			from $\theta_1$ to $\theta_2.$
+		</li>
 	</ul>
 </p>

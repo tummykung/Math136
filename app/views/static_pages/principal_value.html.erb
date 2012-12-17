@@ -8,10 +8,25 @@
 <a name = "principal-value-integrals"><b> Principal value integrals </b></a>
 <p>
 	<ul>
+		<li>
+			When an improper integral does not converge, we
+			can sometimes can make sense of the integral using the 
+			principal value interpretation.
+		</li>
 		<li> Define
 			\[
 				P.V.\int_{-\infty}^\infty \text{sgn}(x) dx 
 				= \lim_{R\to \infty}\int_{-R}^R \text{sgn}(x)dx = 0.
+			\]
+		</li>
+		<li> For a function $f$ that blows up at $0$, 
+			for $(a,b)$ containing 0, we might 
+			want to define
+			\[
+			 P.V.\int_{a}^b f(z)dz = \lim_{\epsilon\to 0}
+			 \left(
+			 	\int_{a}^{-\epsilon} f(z)dz  + \int_{\epsilon}^{b} f(z)dz
+			 \right).
 			\]
 		</li>
 	</ul>

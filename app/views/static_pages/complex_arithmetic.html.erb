@@ -16,7 +16,7 @@
 	\]
 	where $\theta$ is the argument and $\theta$ is the magnitude.
 
-	The conversion is
+	The conversion from cartesian representation to polar representation is
 	\begin{align*}
 		r &= \sqrt{a^2 + b^2},\\
 		\theta &= \text{atan2}(a,b) = \arctan\left(\frac{b}{a}\right),
@@ -24,6 +24,10 @@
 	where when we use $\arctan\left(\frac{b}{a}\right)$ we lost 
 	some information about the sign of $b/a$, so we might need to plus
 	or minus $\pi$.
+
+	The inverse conversion is
+	\[ a = r\cos\theta, \]
+	\[ b = r\sin\theta. \]
 </p>
 
 <hr>
